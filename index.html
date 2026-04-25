@@ -4,42 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Normalize -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
+
+    <!-- Styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
+    <!-- HEADER -->
     <header class="header">
       <div class="container header-container">
         <nav class="nav">
-          <a href="./index.html" class="logo"
-            ><span class="logo-accent">Web</span>Studio</a
-          >
+          <a href="./index.html" class="logo">
+            <span class="logo-accent">Web</span>Studio
+          </a>
+
           <ul class="nav-list">
-            <li><a href="./index.html" class="nav-link current">Studio</a></li>
-            <li><a href="" class="nav-link">Portfolio</a></li>
-            <li><a href="" class="nav-link">Contacts</a></li>
+            <li><a href="#" class="nav-link current">Studio</a></li>
+            <li><a href="#" class="nav-link">Portfolio</a></li>
+            <li><a href="#" class="nav-link">Contacts</a></li>
           </ul>
         </nav>
+
         <address class="contacts">
           <ul class="contacts-list">
             <li>
-              <a href="mailto:info@devstudio.com" class="contact-link"
-                >info@devstudio.com</a
-              >
+              <a href="mailto:info@devstudio.com" class="contact-link">
+                info@devstudio.com
+              </a>
             </li>
             <li>
-              <a href="tel:+110001111111" class="contact-link"
-                >+11 (000) 111-11-11</a
-              >
+              <a href="tel:+110001111111" class="contact-link">
+                +11 (000) 111-11-11
+              </a>
             </li>
           </ul>
         </address>
@@ -47,16 +57,19 @@
     </header>
 
     <main>
+      <!-- HERO -->
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="hero-btn">Order Service</button>
+          <button class="hero-btn">Order Service</button>
         </div>
       </section>
 
+      <!-- FEATURES -->
       <section class="section">
         <div class="container">
           <h2 class="visually-hidden">Features</h2>
+
           <ul class="features-list">
             <li class="features-item">
               <div class="features-icon-box">
@@ -64,48 +77,130 @@
                   <use href="./images/icons.svg#icon-strategy"></use>
                 </svg>
               </div>
-              <h3 class="features-subtitle">Strategy</h3>
-              <p class="features-text">Identify business problems.</p>
+              <h3>Strategy</h3>
+              <p>Identify business problems.</p>
+            </li>
+
+            <li class="features-item">
+              <div class="features-icon-box">
+                <svg width="64" height="64">
+                  <use href="./images/icons.svg#icon-punctuality"></use>
+                </svg>
+              </div>
+              <h3>Punctuality</h3>
+              <p>Meet deadlines consistently.</p>
+            </li>
+
+            <li class="features-item">
+              <div class="features-icon-box">
+                <svg width="64" height="64">
+                  <use href="./images/icons.svg#icon-diligence"></use>
+                </svg>
+              </div>
+              <h3>Diligence</h3>
+              <p>Work hard with precision.</p>
+            </li>
+
+            <li class="features-item">
+              <div class="features-icon-box">
+                <svg width="64" height="64">
+                  <use href="./images/icons.svg#icon-technologies"></use>
+                </svg>
+              </div>
+              <h3>Technologies</h3>
+              <p>Use modern tools.</p>
             </li>
           </ul>
         </div>
       </section>
 
+      <!-- TEAM -->
       <section class="section team-section">
         <div class="container">
           <h2 class="section-title">Our Team</h2>
+
           <ul class="team-list">
             <li class="team-card">
-              <img src="./images/mark.jpg" alt="Mark Guerrero" width="264" />
+              <img src="./images/mark.png" alt="Mark Guerrero" />
               <div class="team-content">
-                <h3 class="team-name">Mark Guerrero</h3>
-                <p class="team-role">Product Designer</p>
-                <ul class="social-list"></ul>
+                <h3>Mark Guerrero</h3>
+                <p>Product Designer</p>
               </div>
             </li>
           </ul>
         </div>
       </section>
 
+      <!-- PORTFOLIO -->
       <section class="section">
         <div class="container">
           <h2 class="section-title">Our Portfolio</h2>
+
           <ul class="portfolio-list">
+            <!-- 6 карточек -->
             <li class="portfolio-item">
               <div class="portfolio-thumb">
-                <img
-                  src="./images/portfolio-1.jpg"
-                  alt="Banking App"
-                  width="360"
-                />
-                <p class="overlay">
-                  14 Stylish and User-Friendly App Design Concepts for Your
-                  Business
-                </p>
+                <img src="./images/image1.jpg" alt="Banking App" />
+                <p class="overlay">Stylish App Design Concepts</p>
               </div>
               <div class="portfolio-info">
-                <h3 class="portfolio-subtitle">Banking App</h3>
-                <p class="portfolio-text">App</p>
+                <h3>Banking App</h3>
+                <p>App</p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <div class="portfolio-thumb">
+                <img src="./images/image2.jpg" alt="Cashless Payment" />
+                <p class="overlay">Payment System</p>
+              </div>
+              <div class="portfolio-info">
+                <h3>Cashless Payment</h3>
+                <p>Marketing</p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <div class="portfolio-thumb">
+                <img src="./images/image3.jpg" alt="Meditation App" />
+                <p class="overlay">Relax App</p>
+              </div>
+              <div class="portfolio-info">
+                <h3>Meditation App</h3>
+                <p>App</p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <div class="portfolio-thumb">
+                <img src="./images/image4.jpg" alt="Taxi Service" />
+                <p class="overlay">Taxi Service UI</p>
+              </div>
+              <div class="portfolio-info">
+                <h3>Taxi Service</h3>
+                <p>Marketing</p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <div class="portfolio-thumb">
+                <img src="./images/image5.jpg" alt="Screen Illustrations" />
+                <p class="overlay">Design Screens</p>
+              </div>
+              <div class="portfolio-info">
+                <h3>Screen Illustrations</h3>
+                <p>Design</p>
+              </div>
+            </li>
+
+            <li class="portfolio-item">
+              <div class="portfolio-thumb">
+                <img src="./images/image6.jpg" alt="Online Courses" />
+                <p class="overlay">Courses Platform</p>
+              </div>
+              <div class="portfolio-info">
+                <h3>Online Courses</h3>
+                <p>Marketing</p>
               </div>
             </li>
           </ul>
@@ -113,19 +208,29 @@
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="container footer-container">
-        <div class="footer-logo-box">
-          <a href="./index.html" class="logo footer-logo"
-            ><span class="logo-accent">Web</span>Studio</a
-          >
+        <div>
+          <a href="#" class="logo footer-logo">
+            <span class="logo-accent">Web</span>Studio
+          </a>
           <p class="footer-text">
             Increase the flow of customers and sales for your business.
           </p>
         </div>
-        <div class="footer-social-box">
+
+        <div>
           <p class="footer-social-title">Social media</p>
-          <ul class="social-list footer-social-list"></ul>
+          <ul class="social-list footer-social-list">
+            <li>
+              <a href="#" class="footer-social-link">
+                <svg width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>

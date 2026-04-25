@@ -7,82 +7,118 @@
   --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 7. Header Underline & Transitions */
+/* BASE */
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--slate);
+}
+
+.container {
+  width: 1158px;
+  margin: 0 auto;
+}
+
+/* HEADER */
 .nav-link {
   position: relative;
   color: var(--navy-blue);
   transition: color var(--transition);
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.nav-link:hover {
   color: var(--ocean);
 }
 
 .nav-link.current::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -1px;
   width: 100%;
   height: 4px;
+  bottom: -1px;
   background-color: var(--ocean);
-  border-radius: 2px;
 }
 
-/* 4 & 5. Portfolio Overlay Slide-up */
+.contact-link {
+  color: var(--slate);
+  transition: color var(--transition);
+}
+
+.contact-link:hover {
+  color: var(--ocean);
+}
+
+/* HERO */
+.hero {
+  background-color: var(--navy-blue);
+  padding: 188px 0;
+  text-align: center;
+}
+
+.hero-title {
+  color: white;
+  font-size: 56px;
+}
+
+.hero-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--iris);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* PORTFOLIO */
 .portfolio-thumb {
   position: relative;
-  overflow: hidden; /* Важливо для відсікання оверлею */
+  overflow: hidden;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--iris);
-  color: var(--cloud);
-  padding: 40px 32px;
-  transform: translateY(100%); /* Початковий стан (внизу) */
+  inset: 0;
+  background: var(--iris);
+  color: white;
+  transform: translateY(100%);
   transition: transform var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio-item:hover .overlay {
-  transform: translateY(0); /* Слайд вгору */
+  transform: translateY(0);
 }
 
-/* 6. Team Content Padding */
+/* TEAM */
 .team-content {
-  padding: 32px 16px; /* Додано бокові відступи */
+  padding: 32px 16px;
   text-align: center;
 }
 
-/* 8. Footer Layout (Двоколонний + Baseline) */
+/* FOOTER */
 .footer {
-  background-color: var(--navy-blue);
+  background: var(--navy-blue);
+  color: white;
   padding: 100px 0;
 }
 
 .footer-container {
   display: flex;
   align-items: baseline;
+  gap: 120px;
 }
 
-.footer-social-link:hover,
-.footer-social-link:focus {
-  background-color: #31d0aa; /* Колір hover для футера */
+.footer-social-link {
+  width: 40px;
+  height: 40px;
+  background: var(--iris);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
-/* Hero Section Styles */
-.hero {
-  background-color: var(--navy-blue);
-  background-image:
-    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url("../images/hero-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 188px 0;
+.footer-social-link:hover {
+  background: #31d0aa;
 }
