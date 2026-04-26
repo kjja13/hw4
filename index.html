@@ -4,49 +4,350 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
-
-    <!-- modern-normalize -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-    />
-
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
-    <!-- HEADER -->
-    <header class="header">
-      <div class="container header-container">
-        <nav class="nav">
-          <a href="./index.html" class="logo"
-            ><span class="logo-accent">Web</span>Studio</a
-          >
+    <!-- SVG Sprite (inline) -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <!-- icon-antenna (satellite dish) — Strategy -->
+      <symbol id="icon-antenna" viewBox="0 0 80 80">
+        <path
+          d="M28 68 L28 54 C28 48 32 44 38 44 C44 44 48 48 48 54 L48 68"
+          stroke="#2E2F42"
+          stroke-width="2.5"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <line
+          x1="18"
+          y1="68"
+          x2="58"
+          y2="68"
+          stroke="#2E2F42"
+          stroke-width="2.5"
+          stroke-linecap="round"
+        />
+        <circle
+          cx="38"
+          cy="54"
+          r="4"
+          stroke="#4D5AE5"
+          stroke-width="2"
+          fill="none"
+        />
+        <path
+          d="M38 44 L38 32"
+          stroke="#2E2F42"
+          stroke-width="2.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M22 58 C14 48 16 30 30 20 C44 10 62 16 64 30 C66 42 56 54 44 56"
+          stroke="#2E2F42"
+          stroke-width="2.5"
+          fill="none"
+          stroke-linecap="round"
+        />
+        <line
+          x1="38"
+          y1="44"
+          x2="66"
+          y2="18"
+          stroke="#2E2F42"
+          stroke-width="2.5"
+          stroke-linecap="round"
+        />
+        <circle
+          cx="70"
+          cy="14"
+          r="5"
+          stroke="#2E2F42"
+          stroke-width="2.5"
+          fill="none"
+        />
+      </symbol>
 
+      <!-- icon-astronaut — Punctuality -->
+      <symbol id="icon-austronaut" viewBox="0 0 80 80">
+        <circle
+          cx="38"
+          cy="28"
+          r="17"
+          stroke="#2E2F42"
+          stroke-width="2.5"
+          fill="none"
+        />
+        <circle
+          cx="38"
+          cy="28"
+          r="9"
+          stroke="#4D5AE5"
+          stroke-width="1.5"
+          fill="none"
+        />
+        <line
+          x1="38"
+          y1="22"
+          x2="38"
+          y2="28"
+          stroke="#2E2F42"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+        <line
+          x1="38"
+          y1="28"
+          x2="43"
+          y2="31"
+          stroke="#2E2F42"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+        <circle cx="38" cy="28" r="2" fill="#2E2F42" />
+        <path
+          d="M24 44 C20 46 16 52 18 60 L22 60 L22 54 L26 54 L26 62 L50 62 L50 54 L54 54 L54 60 L58 60 C60 52 56 46 52 44 Z"
+          stroke="#2E2F42"
+          stroke-width="2.5"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M24 46 L14 52 L16 57 L26 52"
+          stroke="#2E2F42"
+          stroke-width="2.5"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M52 46 L62 52 L60 57 L50 52"
+          stroke="#2E2F42"
+          stroke-width="2.5"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M62 10 L64 15 L69 15 L65 18 L67 23 L62 20 L57 23 L59 18 L55 15 L60 15 Z"
+          fill="#4D5AE5"
+        />
+        <circle cx="69" cy="32" r="2" fill="#4D5AE5" />
+        <circle cx="12" cy="38" r="2" fill="#4D5AE5" />
+        <circle cx="71" cy="46" r="2" fill="#4D5AE5" />
+      </symbol>
+
+      <!-- icon-clock — Diligence -->
+      <symbol id="icon-clock" viewBox="0 0 80 80">
+        <circle
+          cx="40"
+          cy="36"
+          r="28"
+          stroke="#2E2F42"
+          stroke-width="2.5"
+          fill="none"
+        />
+        <line
+          x1="40"
+          y1="36"
+          x2="32"
+          y2="26"
+          stroke="#2E2F42"
+          stroke-width="2.5"
+          stroke-linecap="round"
+        />
+        <line
+          x1="40"
+          y1="36"
+          x2="40"
+          y2="20"
+          stroke="#2E2F42"
+          stroke-width="2.5"
+          stroke-linecap="round"
+        />
+        <circle cx="40" cy="36" r="2.5" fill="#2E2F42" />
+        <line
+          x1="40"
+          y1="10"
+          x2="40"
+          y2="14"
+          stroke="#4D5AE5"
+          stroke-width="2.5"
+          stroke-linecap="round"
+        />
+        <line
+          x1="66"
+          y1="36"
+          x2="62"
+          y2="36"
+          stroke="#4D5AE5"
+          stroke-width="2.5"
+          stroke-linecap="round"
+        />
+        <line
+          x1="14"
+          y1="36"
+          x2="18"
+          y2="36"
+          stroke="#4D5AE5"
+          stroke-width="2.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M26 62 A18 18 0 0 0 54 62"
+          stroke="#2E2F42"
+          stroke-width="2.5"
+          fill="none"
+          stroke-linecap="round"
+        />
+        <polyline
+          points="54,57 54,64 61,64"
+          stroke="#2E2F42"
+          stroke-width="2.5"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+
+      <!-- icon-diagram (laptop + chart) — Technologies -->
+      <symbol id="icon-diagram" viewBox="0 0 80 80">
+        <rect
+          x="6"
+          y="12"
+          width="60"
+          height="40"
+          rx="3"
+          stroke="#2E2F42"
+          stroke-width="2.5"
+          fill="none"
+        />
+        <rect
+          x="13"
+          y="18"
+          width="46"
+          height="28"
+          rx="1"
+          stroke="#2E2F42"
+          stroke-width="1.5"
+          fill="none"
+        />
+        <rect
+          x="28"
+          y="10"
+          width="16"
+          height="2"
+          rx="1"
+          stroke="#2E2F42"
+          stroke-width="1.5"
+          fill="none"
+        />
+        <path
+          d="M2 52 L6 52 L6 56 L66 56 L66 52 L70 52 C72 52 74 54 74 56 C74 58 72 60 70 60 L2 60 C0 60 -2 58 -2 56 C-2 54 0 52 2 52 Z"
+          stroke="#2E2F42"
+          stroke-width="2"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <rect x="20" y="36" width="5" height="8" fill="#4D5AE5" />
+        <rect x="28" y="30" width="5" height="14" fill="#4D5AE5" />
+        <polyline
+          points="16,41 24,33 33,37 42,24 51,30"
+          stroke="#2E2F42"
+          stroke-width="2"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <line
+          x1="51"
+          y1="30"
+          x2="57"
+          y2="22"
+          stroke="#2E2F42"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+        <circle cx="58" cy="21" r="2.5" fill="#2E2F42" />
+      </symbol>
+
+      <!-- icon-instagram — social -->
+      <symbol id="icon-instagram" viewBox="0 0 24 24">
+        <rect
+          x="2"
+          y="2"
+          width="20"
+          height="20"
+          rx="5"
+          stroke="currentColor"
+          stroke-width="2"
+          fill="none"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          r="4"
+          stroke="currentColor"
+          stroke-width="2"
+          fill="none"
+        />
+        <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+      </symbol>
+
+      <!-- icon-twitter — social -->
+      <symbol id="icon-twitter" viewBox="0 0 24 24">
+        <path
+          d="M22 4.01c-.77.35-1.6.58-2.46.69a4.28 4.28 0 001.88-2.37c-.83.49-1.74.84-2.72 1.03A4.27 4.27 0 0011.8 7.6c0 .34.04.67.1.98C8.08 8.4 5.1 6.78 3.08 4.32a4.27 4.27 0 001.32 5.7 4.23 4.23 0 01-1.93-.53v.05a4.28 4.28 0 003.43 4.19 4.3 4.3 0 01-1.93.07 4.28 4.28 0 003.99 2.97A8.58 8.58 0 012 18.57 12.1 12.1 0 008.56 20.5c7.88 0 12.19-6.53 12.19-12.19 0-.19 0-.37-.01-.55A8.7 8.7 0 0022 4.01z"
+          fill="currentColor"
+        />
+      </symbol>
+
+      <!-- icon-facebook — social -->
+      <symbol id="icon-facebook" viewBox="0 0 24 24">
+        <path
+          d="M13.5 3H10.5C9.12 3 8 4.12 8 5.5V8H5v3h3v9h3.5v-9H14l.5-3h-3V5.5c0-.28.22-.5.5-.5H14V3h-.5z"
+          fill="currentColor"
+        />
+      </symbol>
+
+      <!-- icon-linkedin — social -->
+      <symbol id="icon-linkedin" viewBox="0 0 24 24">
+        <path
+          d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S.02 4.88.02 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v13H0V8zm7.5 0H12v1.77h.06c.63-1.2 2.17-2.46 4.47-2.46C21.07 7.31 22 10.22 22 14.06V21h-5v-6.19c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.61-2.38 3.27V21H7.5V8z"
+          fill="currentColor"
+        />
+      </symbol>
+    </svg>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a class="logo" href="index.html">
+            Web<span class="logo-dark">Studio</span>
+          </a>
           <ul class="nav-list">
-            <li><a class="nav-link current" href="">Studio</a></li>
-            <li><a class="nav-link" href="">Portfolio</a></li>
-            <li><a class="nav-link" href="">Contacts</a></li>
+            <li><a class="nav-link current" href="index.html">Studio</a></li>
+            <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li><a class="nav-link" href="#">Contacts</a></li>
           </ul>
         </nav>
-
         <address class="contacts">
           <ul class="contacts-list">
             <li>
-              <a class="contact-link" href="mailto:info@devstudio.com"
+              <a class="contacts-link" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
             <li>
-              <a class="contact-link" href="tel:+110001111111"
+              <a class="contacts-link" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
             </li>
@@ -56,257 +357,460 @@
     </header>
 
     <main>
-      <!-- HERO -->
+      <!-- ===== HERO ===== -->
       <section class="hero">
-        <div class="container hero-container">
+        <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-btn" type="button">Order Service</button>
+          <button class="btn-primary" type="button">Order Service</button>
         </div>
       </section>
 
-      <!-- FEATURES -->
+      <!-- ===== FEATURES ===== -->
       <section class="features section">
         <div class="container">
-          <h2 class="section-title">Our Features</h2>
-
+          <h2 class="visually-hidden">Features</h2>
           <ul class="features-list">
             <li class="features-item">
-              <div class="features-icon">
-                <svg width="64" height="64">
-                  <use href="./images/icons.svg#icon-strategy"></use>
+              <div class="features-icon-wrap">
+                <svg class="features-icon" aria-hidden="true">
+                  <use xlink:href="./images/icons.svg#icon-antenna"></use>
                 </svg>
               </div>
               <h3 class="features-subtitle">Strategy</h3>
               <p class="features-text">
-                Business problem solving and efficiency solutions.
+                Our goal is to identify the business problem to walk away with
+                the perfect and creative solution.
               </p>
             </li>
-
             <li class="features-item">
-              <div class="features-icon">
-                <svg width="64" height="64">
-                  <use href="./images/icons.svg#icon-punctuality"></use>
+              <div class="features-icon-wrap">
+                <svg class="features-icon" aria-hidden="true">
+                  <use xlink:href="./images/icons.svg#icon-austronaut"></use>
                 </svg>
               </div>
               <h3 class="features-subtitle">Punctuality</h3>
-              <p class="features-text">Timely delivery of key messages.</p>
+              <p class="features-text">
+                Bring the key message to the brand's audience for the best price
+                within the shortest possible time.
+              </p>
             </li>
-
             <li class="features-item">
-              <div class="features-icon">
-                <svg width="64" height="64">
-                  <use href="./images/icons.svg#icon-diligence"></use>
+              <div class="features-icon-wrap">
+                <svg class="features-icon" aria-hidden="true">
+                  <use xlink:href="./images/icons.svg#icon-clock"></use>
                 </svg>
               </div>
               <h3 class="features-subtitle">Diligence</h3>
               <p class="features-text">
-                Research and optimization of business.
+                We constantly analyze the results of our work and improve it to
+                ensure your business is always growing.
               </p>
             </li>
-
             <li class="features-item">
-              <div class="features-icon">
-                <svg width="64" height="64">
-                  <use href="./images/icons.svg#icon-technologies"></use>
+              <div class="features-icon-wrap">
+                <svg class="features-icon" aria-hidden="true">
+                  <use xlink:href="./images/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
               <h3 class="features-subtitle">Technologies</h3>
-              <p class="features-text">Modern digital product development.</p>
+              <p class="features-text">
+                Designed with the latest technology to provide the best user
+                experience and digital presence for your business.
+              </p>
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- TEAM -->
+      <!-- ===== OUR TEAM ===== -->
       <section class="team section">
         <div class="container">
           <h2 class="section-title">Our Team</h2>
-
           <ul class="team-list">
-            <!-- CARD 1 -->
-            <li class="team-card">
-              <img src="./images/mark.png" alt="Mark Guerrero" />
-              <h3 class="team-name">Mark Guerrero</h3>
-              <p class="team-role">Product Designer</p>
-
-              <ul class="social-list">
-                <li>
-                  <a class="social-link"
-                    ><svg><use href="./images/icons.svg#icon-instagram" /></svg
-                  ></a>
-                </li>
-                <li>
-                  <a class="social-link"
-                    ><svg><use href="./images/icons.svg#icon-twitter" /></svg
-                  ></a>
-                </li>
-                <li>
-                  <a class="social-link"
-                    ><svg><use href="./images/icons.svg#icon-facebook" /></svg
-                  ></a>
-                </li>
-                <li>
-                  <a class="social-link"
-                    ><svg><use href="./images/icons.svg#icon-linkedin" /></svg
-                  ></a>
-                </li>
-              </ul>
+            <li class="team-item">
+              <img
+                src="images/mark.png"
+                alt="Mark Guerrero"
+                width="264"
+                height="260"
+              />
+              <div class="team-info">
+                <h3 class="team-name">Mark Guerrero</h3>
+                <p class="team-role">Product Designer</p>
+                <ul class="social-list">
+                  <li>
+                    <a class="social-link" href="#" aria-label="Instagram">
+                      <svg class="social-icon" aria-hidden="true">
+                        <use
+                          xlink:href="./images/icons.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-link" href="#" aria-label="Twitter">
+                      <svg class="social-icon" aria-hidden="true">
+                        <use xlink:href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-link" href="#" aria-label="Facebook">
+                      <svg class="social-icon" aria-hidden="true">
+                        <use
+                          xlink:href="./images/icons.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-link" href="#" aria-label="LinkedIn">
+                      <svg class="social-icon" aria-hidden="true">
+                        <use
+                          xlink:href="./images/icons.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
-
-            <!-- CARD 2 -->
-            <li class="team-card">
-              <img src="./images/tom.png" alt="Tom Ford" />
-              <h3 class="team-name">Tom Ford</h3>
-              <p class="team-role">Frontend Developer</p>
-
-              <ul class="social-list">
-                <li>
-                  <a class="social-link"
-                    ><svg><use href="./images/icons.svg#icon-instagram" /></svg
-                  ></a>
-                </li>
-                <li>
-                  <a class="social-link"
-                    ><svg><use href="./images/icons.svg#icon-twitter" /></svg
-                  ></a>
-                </li>
-                <li>
-                  <a class="social-link"
-                    ><svg><use href="./images/icons.svg#icon-facebook" /></svg
-                  ></a>
-                </li>
-                <li>
-                  <a class="social-link"
-                    ><svg><use href="./images/icons.svg#icon-linkedin" /></svg
-                  ></a>
-                </li>
-              </ul>
+            <li class="team-item">
+              <img
+                src="images/tom.png"
+                alt="Tom Ford"
+                width="264"
+                height="260"
+              />
+              <div class="team-info">
+                <h3 class="team-name">Tom Ford</h3>
+                <p class="team-role">Frontend Developer</p>
+                <ul class="social-list">
+                  <li>
+                    <a class="social-link" href="#" aria-label="Instagram">
+                      <svg class="social-icon" aria-hidden="true">
+                        <use
+                          xlink:href="./images/icons.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-link" href="#" aria-label="Twitter">
+                      <svg class="social-icon" aria-hidden="true">
+                        <use xlink:href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-link" href="#" aria-label="Facebook">
+                      <svg class="social-icon" aria-hidden="true">
+                        <use
+                          xlink:href="./images/icons.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-link" href="#" aria-label="LinkedIn">
+                      <svg class="social-icon" aria-hidden="true">
+                        <use
+                          xlink:href="./images/icons.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
-
-            <!-- CARD 3 -->
-            <li class="team-card">
-              <img src="./images/camila.png" alt="Camila Garcia" />
-              <h3 class="team-name">Camila Garcia</h3>
-              <p class="team-role">Marketing</p>
-
-              <ul class="social-list">
-                <li>
-                  <a class="social-link"
-                    ><svg><use href="./images/icons.svg#icon-instagram" /></svg
-                  ></a>
-                </li>
-                <li>
-                  <a class="social-link"
-                    ><svg><use href="./images/icons.svg#icon-twitter" /></svg
-                  ></a>
-                </li>
-                <li>
-                  <a class="social-link"
-                    ><svg><use href="./images/icons.svg#icon-facebook" /></svg
-                  ></a>
-                </li>
-                <li>
-                  <a class="social-link"
-                    ><svg><use href="./images/icons.svg#icon-linkedin" /></svg
-                  ></a>
-                </li>
-              </ul>
+            <li class="team-item">
+              <img
+                src="images/camila.png"
+                alt="Camila Garcia"
+                width="264"
+                height="260"
+              />
+              <div class="team-info">
+                <h3 class="team-name">Camila Garcia</h3>
+                <p class="team-role">Marketing</p>
+                <ul class="social-list">
+                  <li>
+                    <a class="social-link" href="#" aria-label="Instagram">
+                      <svg class="social-icon" aria-hidden="true">
+                        <use
+                          xlink:href="./images/icons.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-link" href="#" aria-label="Twitter">
+                      <svg class="social-icon" aria-hidden="true">
+                        <use xlink:href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-link" href="#" aria-label="Facebook">
+                      <svg class="social-icon" aria-hidden="true">
+                        <use
+                          xlink:href="./images/icons.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-link" href="#" aria-label="LinkedIn">
+                      <svg class="social-icon" aria-hidden="true">
+                        <use
+                          xlink:href="./images/icons.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
-
-            <!-- CARD 4 -->
-            <li class="team-card">
-              <img src="./images/daniel.png" alt="Daniel Wilson" />
-              <h3 class="team-name">Daniel Wilson</h3>
-              <p class="team-role">UI Designer</p>
-
-              <ul class="social-list">
-                <li>
-                  <a class="social-link"
-                    ><svg><use href="./images/icons.svg#icon-instagram" /></svg
-                  ></a>
-                </li>
-                <li>
-                  <a class="social-link"
-                    ><svg><use href="./images/icons.svg#icon-twitter" /></svg
-                  ></a>
-                </li>
-                <li>
-                  <a class="social-link"
-                    ><svg><use href="./images/icons.svg#icon-facebook" /></svg
-                  ></a>
-                </li>
-                <li>
-                  <a class="social-link"
-                    ><svg><use href="./images/icons.svg#icon-linkedin" /></svg
-                  ></a>
-                </li>
-              </ul>
+            <li class="team-item">
+              <img
+                src="images/daniel.png"
+                alt="Daniel Wilson"
+                width="264"
+                height="260"
+              />
+              <div class="team-info">
+                <h3 class="team-name">Daniel Wilson</h3>
+                <p class="team-role">UI Designer</p>
+                <ul class="social-list">
+                  <li>
+                    <a class="social-link" href="#" aria-label="Instagram">
+                      <svg class="social-icon" aria-hidden="true">
+                        <use
+                          xlink:href="./images/icons.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-link" href="#" aria-label="Twitter">
+                      <svg class="social-icon" aria-hidden="true">
+                        <use xlink:href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-link" href="#" aria-label="Facebook">
+                      <svg class="social-icon" aria-hidden="true">
+                        <use
+                          xlink:href="./images/icons.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="social-link" href="#" aria-label="LinkedIn">
+                      <svg class="social-icon" aria-hidden="true">
+                        <use
+                          xlink:href="./images/icons.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- PORTFOLIO -->
+      <!-- ===== PORTFOLIO ===== -->
       <section class="portfolio section">
         <div class="container">
           <h2 class="section-title">Our Portfolio</h2>
+          <ul class="filter-list">
+            <li><button class="btn-filter" type="button">All</button></li>
+            <li><button class="btn-filter" type="button">App</button></li>
+            <li><button class="btn-filter" type="button">Marketing</button></li>
+            <li><button class="btn-filter" type="button">Design</button></li>
+          </ul>
 
           <ul class="portfolio-list">
-            <li class="portfolio-card">
-              <div class="portfolio-thumb">
-                <img src="./images/app.jpg" alt="App" />
-                <p class="portfolio-overlay">App Design</p>
-              </div>
-              <h3 class="portfolio-subtitle">Banking App</h3>
+            <li class="portfolio-item">
+              <a class="portfolio-link" href="#">
+                <div class="portfolio-thumb">
+                  <img
+                    src="images/image1.jpg"
+                    alt="Banking App"
+                    width="360"
+                    height="300"
+                  />
+                  <p class="portfolio-overlay">
+                    14 Stylish and User-Friendly App Design Textures you can use
+                    for free. Scroll through and find the right textures for
+                    your project.
+                  </p>
+                </div>
+                <div class="portfolio-info">
+                  <h3 class="portfolio-title">Banking App</h3>
+                  <p class="portfolio-type">App</p>
+                </div>
+              </a>
             </li>
-
-            <li class="portfolio-card">
-              <div class="portfolio-thumb">
-                <img src="./images/website.jpg" alt="Website" />
-                <p class="portfolio-overlay">Website</p>
-              </div>
-              <h3 class="portfolio-subtitle">Marketing Site</h3>
+            <li class="portfolio-item">
+              <a class="portfolio-link" href="#">
+                <div class="portfolio-thumb">
+                  <img
+                    src="images/image2.jpg"
+                    alt="Cashless Payment"
+                    width="360"
+                    height="300"
+                  />
+                  <p class="portfolio-overlay">
+                    14 Stylish and User-Friendly App Design Textures you can use
+                    for free. Scroll through and find the right textures for
+                    your project.
+                  </p>
+                </div>
+                <div class="portfolio-info">
+                  <h3 class="portfolio-title">Cashless Payment</h3>
+                  <p class="portfolio-type">Marketing</p>
+                </div>
+              </a>
             </li>
-
-            <li class="portfolio-card">
-              <div class="portfolio-thumb">
-                <img src="./images/design.jpg" alt="Design" />
-                <p class="portfolio-overlay">Design</p>
-              </div>
-              <h3 class="portfolio-subtitle">Creative Design</h3>
+            <li class="portfolio-item">
+              <a class="portfolio-link" href="#">
+                <div class="portfolio-thumb">
+                  <img
+                    src="images/image3.jpg"
+                    alt="Meditation App"
+                    width="360"
+                    height="300"
+                  />
+                  <p class="portfolio-overlay">
+                    14 Stylish and User-Friendly App Design Textures you can use
+                    for free. Scroll through and find the right textures for
+                    your project.
+                  </p>
+                </div>
+                <div class="portfolio-info">
+                  <h3 class="portfolio-title">Meditation App</h3>
+                  <p class="portfolio-type">App</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-item">
+              <a class="portfolio-link" href="#">
+                <div class="portfolio-thumb">
+                  <img
+                    src="images/image4.jpg"
+                    alt="Taxi Service"
+                    width="360"
+                    height="300"
+                  />
+                  <p class="portfolio-overlay">
+                    14 Stylish and User-Friendly App Design Textures you can use
+                    for free. Scroll through and find the right textures for
+                    your project.
+                  </p>
+                </div>
+                <div class="portfolio-info">
+                  <h3 class="portfolio-title">Taxi Service</h3>
+                  <p class="portfolio-type">Marketing</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-item">
+              <a class="portfolio-link" href="#">
+                <div class="portfolio-thumb">
+                  <img
+                    src="images/image5.jpg"
+                    alt="Screen Illustrations"
+                    width="360"
+                    height="300"
+                  />
+                  <p class="portfolio-overlay">
+                    14 Stylish and User-Friendly App Design Textures you can use
+                    for free. Scroll through and find the right textures for
+                    your project.
+                  </p>
+                </div>
+                <div class="portfolio-info">
+                  <h3 class="portfolio-title">Screen Illustrations</h3>
+                  <p class="portfolio-type">Design</p>
+                </div>
+              </a>
+            </li>
+            <li class="portfolio-item">
+              <a class="portfolio-link" href="#">
+                <div class="portfolio-thumb">
+                  <img
+                    src="images/image6.jpg"
+                    alt="Online Courses"
+                    width="360"
+                    height="300"
+                  />
+                  <p class="portfolio-overlay">
+                    14 Stylish and User-Friendly App Design Textures you can use
+                    for free. Scroll through and find the right textures for
+                    your project.
+                  </p>
+                </div>
+                <div class="portfolio-info">
+                  <h3 class="portfolio-title">Online Courses</h3>
+                  <p class="portfolio-type">Marketing</p>
+                </div>
+              </a>
             </li>
           </ul>
         </div>
       </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
-      <div class="container footer-container">
-        <p class="footer-text">WebStudio - modern solutions for business</p>
-
-        <ul class="footer-socials">
-          <li>
-            <a class="social-link"
-              ><svg><use href="./images/icons.svg#icon-instagram" /></svg
-            ></a>
-          </li>
-          <li>
-            <a class="social-link"
-              ><svg><use href="./images/icons.svg#icon-twitter" /></svg
-            ></a>
-          </li>
-          <li>
-            <a class="social-link"
-              ><svg><use href="./images/icons.svg#icon-facebook" /></svg
-            ></a>
-          </li>
-          <li>
-            <a class="social-link"
-              ><svg><use href="./images/icons.svg#icon-linkedin" /></svg
-            ></a>
-          </li>
-        </ul>
+      <div class="container">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            Web<span class="logo-light">Studio</span>
+          </a>
+          <p class="footer-text">
+            Increase the flow of customers and sales for your business with
+            digital marketing & growth solutions.
+          </p>
+        </div>
+        <div class="footer-social">
+          <p class="footer-social-title">Social media</p>
+          <ul class="social-list">
+            <li>
+              <a class="social-link" href="#" aria-label="Instagram">
+                <svg class="social-icon" aria-hidden="true">
+                  <use xlink:href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="#" aria-label="Twitter">
+                <svg class="social-icon" aria-hidden="true">
+                  <use xlink:href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="#" aria-label="Facebook">
+                <svg class="social-icon" aria-hidden="true">
+                  <use xlink:href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="#" aria-label="LinkedIn">
+                <svg class="social-icon" aria-hidden="true">
+                  <use xlink:href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>
